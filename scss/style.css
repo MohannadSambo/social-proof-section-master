@@ -7,4 +7,117 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Spartan", sans-serif;
+}
+
+body .container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'info' 'rating' 'comments';
+  padding: 25px;
+  margin: 50px 0;
+}
+
+body .container .product-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: info;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+body .container .product-info .title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #502050;
+}
+
+body .container .product-info .description {
+  font-size: 14px;
+  color: #937b92;
+}
+
+body .container .product-rating {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: rating;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+body .container .product-rating .rating {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background-color: #f7f2f7;
+}
+
+body .container .product-rating .rating .stars {
+  margin-bottom: 8px;
+}
+
+body .container .product-rating .rating .rating-desc {
+  color: #502050;
+  font-weight: 700;
+}
+
+body .container .buyers-comments {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: comments;
+}
+
+body .container .buyers-comments .comment {
+  background-color: #502050;
+  color: white;
+  margin-bottom: 16px;
+  padding: 32px 26px;
+  border-radius: 10px;
+}
+
+body .container .buyers-comments .comment .buyer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+body .container .buyers-comments .comment .buyer-info .buyer-photo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 16px;
+}
+
+body .container .buyers-comments .comment .buyer-info .personal .name {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+body .container .buyers-comments .comment .buyer-info .personal .status {
+  color: #ee68a4;
+  font-weight: 400;
+}
+
+body .container .buyers-comments .comment .buyer-comment {
+  line-height: 25px;
+}
 /*# sourceMappingURL=style.css.map */

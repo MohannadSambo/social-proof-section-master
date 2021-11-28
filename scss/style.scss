@@ -1,3 +1,101 @@
 @import './variables';
 @import './reset';
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+
+    .container {
+        display: grid;
+        grid-template-areas: 'info'
+                             'rating'
+                             'comments';
+        padding: 25px;
+        margin: 50px 0;
+
+        .product-info {
+            grid-area: info;
+            text-align: center;
+            margin-bottom: 32px;
+
+            .title {
+                font-weight: 700;
+                font-size: 30px;
+                margin-bottom: 16px;
+                color: $dark-magneta;
+            }
+
+            .description {
+                font-size: 14px;
+                color: $dark-grayish-magneta;
+            }
+        }
+
+        .product-rating {
+            grid-area: rating;
+            text-align: center;   
+            margin-bottom: 32px;
+            
+            .rating {
+                padding: 8px;
+                margin-bottom: 16px;
+                border-radius: 10px;
+                background-color: $light-grayish-magneta;
+
+                .stars {
+                    margin-bottom: 8px;
+                }
+
+                .rating-desc {
+                    color: $dark-magneta;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .buyers-comments {
+            grid-area: comments;
+            .comment {
+                background-color: $dark-magneta;
+                color: white;
+                margin-bottom: 16px;
+                padding: 32px 26px;
+                border-radius: 10px;
+
+                .buyer-info {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 32px;
+
+                    .buyer-photo {
+                        border-radius: 50%;
+                        height: 50px;
+                        width: 50px;
+                        margin-right: 16px;
+                    }
+
+                    .personal {
+
+                        .name {
+                            margin-bottom: 4px;
+                            font-weight: 700;
+                        }
+
+                        .status {
+                            color: $soft-pink;
+                            font-weight: 400;
+                        }
+
+                    }
+                }
+
+                .buyer-comment {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
