@@ -57,6 +57,7 @@ body {
 
         .buyers-comments {
             grid-area: comments;
+
             .comment {
                 background-color: $dark-magneta;
                 color: white;
@@ -78,7 +79,6 @@ body {
                     }
 
                     .personal {
-
                         .name {
                             margin-bottom: 4px;
                             font-weight: 700;
@@ -94,6 +94,85 @@ body {
 
                 .buyer-comment {
                     line-height: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    body {
+        height: 100vh;
+
+        .container {
+            grid-template-areas: 'info rating'
+                                 'comments comments';
+            width: 80%;
+            height: 80%;
+
+            .product-info {
+                text-align: left;
+                padding-right: 25%;
+
+                .title {
+                    font-size: 3em;
+                    letter-spacing: -1px;
+                }
+
+                .description {
+                    font-size: 1em;
+                    line-height: 25px;
+                    letter-spacing: -1px;
+                    padding-right: 10px;
+                }
+            }
+
+            .product-rating {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .rating {
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding: 15px;
+
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .left {
+                    align-self: flex-start;
+                }
+
+                .right {
+                    align-self: flex-end;
+                }
+            }
+
+            .buyers-comments {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                margin: 30px 0;
+                font-size: small;
+
+                .comment {
+
+                    &:nth-child(1) {
+                        position: relative;
+                        bottom: 15px;
+                    }
+
+                    &:nth-child(3) {
+                        position: relative;
+                        top: 15px;
+                    }
                 }
             }
         }
